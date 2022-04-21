@@ -3,6 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ICON -->
+    <script src="https://kit.fontawesome.com/cb5f356e9e.js" crossorigin="anonymous"></script>
+
+    <!-- FONTS FROM GOOGLE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@100&display=swap" rel="stylesheet">
+
     <!-- displays site properly based on user's device -->
 
     <link
@@ -25,11 +34,122 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
+
+      *{
+        margin: 0;
+      }
+
+      #mainContainer{
+        width: 100%;
+        height: 100vh;
+        background: url(/images/bg-desktop.svg);
+        background-color: hsl(257, 40%, 49%);
+        display: grid;
+        grid-template-columns: 1.5fr 1.1fr;
+        grid-template-rows: 2fr 4fr 1fr;
+        overflow: hidden;
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      #mainContainer .logotype{
+        grid-column: 1/3;
+        align-self: center;
+      }
+
+      #mainContainer .logotype img{
+        width: 200px;
+        margin-left: 5rem;
+      }
+
+      #mainContainer .imgPages{
+        width: 80%;
+        justify-self: center;
+      }
+
+      
+      #mainContainer .content{
+        align-self: center;
+        padding-right: 6rem;
+        display: flex;
+        height: 60%;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      
+      #mainContainer .content h1{
+        font-family: 'Inconsolata', monospace;
+        font-weight: 700;
+        font-size: 2.4rem;
+        padding-right: 4rem;
+      }
+      
+      .button{
+        background: #fff;
+        border: 1px solid #fff;
+        color:hsl(257, 40%, 49%);
+        font-family: 'Open Sans', sans-serif;
+        padding: 0.8rem 4rem;
+        font-size: 1.1rem;
+        border-radius: 50px;
+        width: 40%;
+        transition: all 0.5s;
+      }
+
+      .button:hover{
+        /* opacity: 0.8; */
+        cursor: pointer;
+        background-color: hsl(257, 40%, 49%);
+        color: white;
+      }
+      
+      .icon{
+        padding: 0.8rem;
+        /* background-color: purple; */
+        border: 1px solid #fff;
+        border-radius: 50%;
+        margin: 0 0.7rem;
+        transition: all 0.5s;
+      }
+
+      .icon:hover{
+        /* opacity: 0.8; */
+        cursor: pointer;
+        color:hsl(257, 40%, 49%);
+        background-color: #fff;
+      }
+
+      #mainContainer .socialMedia{
+        grid-column: 2/3;
+        
+        justify-self: end;
+        padding-right: 3rem;
+      }
+
     </style>
   </head>
   <body>
-    Build The Community Your Fans Will Love Huddle re-imagines the way we build
-    communities. You have a voice, but so does your audience. Create connections
-    with your users as you engage in genuine discussion. Register
+    <section id="mainContainer">
+
+      <header class="logotype">
+        <img src="/images/logo.svg" alt="logo">
+      </header>
+
+      <!-- <div class="principalContent"> -->
+        <img src="/images/illustration-mockups.svg" alt="pages" srcset="" class="imgPages">
+        <div class="content">
+          <h1> Build The Community Your Fans Will Love </h1>
+          <p> Huddle re-imagines the way we build
+            communities. You have a voice, but so does your audience. Create connections
+            with your users as you engage in genuine discussion. </p>
+            <button class="button"> Register</button>
+        </div>
+        <div class="socialMedia">
+          <i class="fa-brands fa-facebook-f icon"></i>
+          <i class="fa-brands fa-twitter icon"></i>
+          <i class="fa-brands fa-instagram icon"></i>
+        </div>
+      <!-- </div> -->
+    </section>
   </body>
 </html>

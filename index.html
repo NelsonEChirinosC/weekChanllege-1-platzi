@@ -37,6 +37,11 @@
 
       *{
         margin: 0;
+        box-sizing: border-box;
+      }
+
+      html{
+        height: 100%;
       }
 
       #mainContainer{
@@ -59,17 +64,18 @@
 
       #mainContainer .logotype img{
         width: 200px;
-        margin-left: 5rem;
+        margin-left: 7%;
       }
 
       #mainContainer .imgPages{
-        width: 80%;
+        width: 77%;
         justify-self: center;
       }
 
       
       #mainContainer .content{
-        align-self: center;
+        /* align-self: center; */
+        padding-top: 2rem;
         padding-right: 6rem;
         display: flex;
         height: 60%;
@@ -94,6 +100,7 @@
         border-radius: 50px;
         width: 40%;
         transition: all 0.5s;
+        box-shadow: 1px 1px 5px 0px #555;
       }
 
       .button:hover{
@@ -124,6 +131,71 @@
         
         justify-self: end;
         padding-right: 3rem;
+      }
+
+      @media (max-width: 375px) {
+        #mainContainer{
+          display: grid;
+          overflow: auto;
+          grid-gap: 5px;
+          
+          /* height: 100%; */
+
+        }
+
+        #mainContainer .content, #mainContainer .socialMedia, #mainContainer .logotype{
+          grid-column: 1/-1;
+        }
+        
+
+        #mainContainer .imgPages{
+        grid-column: 1/-1;
+        width: 90%;
+        justify-self: center;
+        }
+
+        #mainContainer .logotype {
+          height: 100px;
+          display: grid;
+        
+        }
+
+        #mainContainer .logotype img{
+          width: 100px;
+          align-self: center;
+        }
+
+        #mainContainer .content{
+          padding: 0 2rem;
+          margin: 5rem 0;
+          text-align: center;
+          justify-self: center;
+        }
+
+        #mainContainer .content h1{
+          font-size: 1.3rem;
+          text-align: center;
+          padding: 0;
+        }
+
+        #mainContainer .content p{
+          font-size: 1rem;
+          margin: 2rem 0;
+        }
+
+        .button {
+          width: 80%;
+          font-size: 0.9rem;
+          align-self: center;
+        }
+
+        #mainContainer .socialMedia{
+          padding: 0;
+          justify-self: center;
+          align-self: center;
+          margin-bottom: 2rem;
+        }
+
       }
 
     </style>
